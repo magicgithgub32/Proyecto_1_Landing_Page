@@ -57,6 +57,7 @@ body {
    font-size: var(--rc-typography-h3);
    font-weight: 400;
    height: 100%;
+   width: 100%;
    line-height: 1.2;
    margin: 0 auto;
    overflow-y: scroll;
@@ -97,10 +98,6 @@ body {
 
  
 /* LAYOUT */
-
-.rc-layout-container {
-   padding-right: 1.5rem;
- }
  
  .rc-layout-flex {
    align-items: center;
@@ -246,7 +243,6 @@ body {
   overflow: hidden;
   position: relative;
   text-align: center;
-  width: 100%;
 
 }
 
@@ -300,6 +296,7 @@ body {
   margin-top: 3rem;
   padding: 1rem;
   width: 90vw;
+  gap: 1rem;
 }
 
 .rc-section-featured-product {
@@ -358,13 +355,18 @@ font-size: var(rc-typography-main-image);
   margin-top: .2rem;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
 
-  :root {
-    
+  .rc-section-header__layout {
+    margin-right: 1.5rem;
+  }
+
+  .rc-section-banner {
+    width: 100%;
   }
 
   .rc-section-banner--button-container {
+    font-size: var(--rc-typography-h3) ;
     left: 0%;
     width: 100%;
   }
@@ -374,12 +376,65 @@ font-size: var(rc-typography-main-image);
   }
 
   .rc-section-featured-gallery {
-    grid-template-columns: repeat(auto-fill, minmax(8rem, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     margin-top: 3rem;
     padding: 1rem;
   }
 
-  .rc-section-footer-media {
-    margin-left: 1.2rem;
+  .rc-component-button-primary,
+  .rc-component-button-secondary {
+    font-size: var(--rc-typography-h3);
+  }
+
+  .rc-section-featured-product-text,
+  .rc-section-featured-price {
+    font-size: var(--rc-typography-h3);
+  }
+
+  .rc-section-banner--text {
+    font-size: 12rem;
+  }
+
+  .rc-section-footer {
+    font-size: var(--rc-typography-h3)
+  }
+
+  p {font-size: larger;}
+}
+
+@media screen and (min-width: 376px) and (max-width: 768px) {
+
+  .rc-section-header__layout {
+    margin-right: 1.5rem;
+  }
+
+  .rc-section-banner {
+    width: 100%;
+  } 
+
+  #rc-section-banner-img {
+  width: 100%;
+  }
+
+  .rc-section-banner--button-container {
+    font-size: var(--rc-typography-h3) ;
+    left: 0%;
+    width: 100%;
+  }
+
+  .rc-section-featured-gallery {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    margin-top: 3rem;
+    padding: 1rem;
+  }
+
+  .rc-component-button-primary,
+  .rc-component-button-secondary {
+    font-size: var(--rc-typography-h3);
+  }
+
+  .rc-section-featured-product-text,
+  .rc-section-featured-price {
+    font-size: var(--rc-typography-h3);
   }
 }
